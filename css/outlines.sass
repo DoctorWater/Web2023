@@ -1,6 +1,6 @@
 
 @mixin image-border()
-    border: 5px solid #856517
+    border: 8px solid #856517
 
 @mixin placeholder-style()
     background-color: white
@@ -29,7 +29,7 @@ body
     
 div.logo
     display: inline-block
-    width: 19,58%
+    width: 19.58%
     height: $logo-size
     float: left
 #logo
@@ -50,7 +50,7 @@ div.top-text
 
 .main-container h1
     font-size: $h1-font-size
-    padding-left: 51px
+    padding-left: 101px
 
 .main-container h2
     font-size: $h2-font-size
@@ -67,10 +67,10 @@ nav.main-nav p
     text-align: center
 
 div.first-image-block
+    margin-top: 30px
     text-align: center
 
-div.first-image-block img
-    margin-top: 30px
+div.first-image-block img 
     width: 646px
     height: 644px
     @include image-border
@@ -99,13 +99,32 @@ div.side p
 
 nav.side-nav
     @include placeholder-style
-    height: 1347px
+    height: 1287px
 
 div.order-form
     @include placeholder-style
-    height: 1066px
+    height: 1098px
     margin-top: 52px
 
-     
+
+div.second-image-block
+    margin-top: 20px
+    text-align: center
+
+div.second-image-block img
+    width: 646px
+    height: 644px
+    @include image-border
+
+div.second-image-block img:first-of-type
+    float: left
+
+div.second-image-block img:last-of-type
+    float: right
+footer
+    width: 100%
+    display: inline-block
+    margin-top: 30px
+    @include placeholder-style
 @import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Ruslan+Display&display=swap')
