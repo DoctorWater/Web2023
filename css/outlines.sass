@@ -1,0 +1,111 @@
+
+@mixin image-border()
+    border: 5px solid #856517
+
+@mixin placeholder-style()
+    background-color: white
+    font-family: Roboto
+    font-size: 48px
+    font-style: italic
+    text-align: center
+    font-weight: 400
+    line-height: normal
+    
+$logo-size: 376px
+$top-text-font-family: 'Ruslan Display'
+$background-gradient: linear-gradient(180deg, rgba(75, 11, 11, 0.25) 0%, rgba(105, 20, 20, 0.76) 60.42%)
+$h1-font-size: 70px
+$h2-font-size: 40px
+
+html
+    background: $background-gradient
+    background-repeat: no-repeat
+
+body
+    width: 1890px
+    height: 3243px
+    margin-top: 47px
+    padding: 0px 49px 49px 49px
+    
+div.logo
+    display: inline-block
+    width: 19,58%
+    height: $logo-size
+    float: left
+#logo
+    width: $logo-size
+    height: $logo-size
+    
+div.central
+    width: 71.21%
+    display: inline-block
+    float: right
+
+div.top-text
+    font-family: $top-text-font-family
+    color: #b8860b
+    display: inline-block
+    -webkit-text-stroke: 0.3px black
+    text-shadow: 5px 5px 4px rgba(133, 101, 23, 0.50)
+
+.main-container h1
+    font-size: $h1-font-size
+    padding-left: 51px
+
+.main-container h2
+    font-size: $h2-font-size
+    text-align: center
+
+nav.main-nav
+    width: 1347px
+    height: 132px
+    display: flex
+    justify-content: center
+    @include placeholder-style
+
+nav.main-nav p
+    text-align: center
+
+div.first-image-block
+    text-align: center
+
+div.first-image-block img
+    margin-top: 30px
+    width: 646px
+    height: 644px
+    @include image-border
+
+div.first-image-block img:first-of-type
+    float: left
+
+div.first-image-block img:last-of-type
+    float: right
+
+div.main-filling
+    @include placeholder-style
+    display: inline-block
+    height: 1068px
+    width: 100%
+    margin-top: 30px
+
+div.side
+    width: 21.58%
+    display: inline-block
+    float: left
+    margin-top: 30px
+
+div.side p
+    margin: 0px
+
+nav.side-nav
+    @include placeholder-style
+    height: 1347px
+
+div.order-form
+    @include placeholder-style
+    height: 1066px
+    margin-top: 52px
+
+     
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Ruslan+Display&display=swap')
