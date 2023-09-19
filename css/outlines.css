@@ -145,14 +145,13 @@ li:not(:first-of-type) {
 }
 
 section.order-form {
-  background-color: white;
-  font-family: Roboto;
-  font-size: 48px;
-  font-style: italic;
-  text-align: center;
-  font-weight: 400;
-  line-height: normal;
+  color: #d09e23;
+  font-size: 30px;
   margin-top: 52px;
+}
+
+section.order-form input, label {
+  display: block;
 }
 
 section.second-image-block {
