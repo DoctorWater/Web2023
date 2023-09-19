@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Ruslan+Display&display=swap");
 html {
-  background: linear-gradient(180deg, rgba(75, 11, 11, 0.25) 0%, rgba(105, 20, 20, 0.76) 60.42%);
+  background: linear-gradient(180deg, rgba(200, 115, 37, 0.76) 0%, rgba(115, 75, 40, 0.76) 37.5%, rgba(104, 59, 21, 0.76) 39.58%, rgba(54, 30, 12, 0.76) 60.42%);
   background-repeat: no-repeat;
 }
 
@@ -24,33 +24,39 @@ div.logo {
   height: 376px;
 }
 
-div.central {
-  width: 71.21%;
+header {
+  width: 100%;
   display: inline-block;
-  float: right;
 }
 
 div.top-text {
+  padding-top: 30px;
   font-family: "Ruslan Display";
-  color: #b8860b;
   display: inline-block;
   -webkit-text-stroke: 0.3px black;
-  text-shadow: 5px 5px 4px rgba(133, 101, 23, 0.5);
 }
 
 .main-container h1 {
   font-size: 70px;
   padding-left: 101px;
+  color: #784E0D;
+  text-shadow: 5px 5px 4px rgba(87, 61, 19, 0.5);
 }
 
 .main-container h2 {
   font-size: 40px;
   text-align: center;
+  color: #B8860B;
+  text-shadow: 5px 5px 4px rgba(133, 101, 23, 0.5);
+}
+
+main {
+  margin-left: auto;
+  width: 72.7%;
+  float: right;
 }
 
 nav.main-nav {
-  width: 1347px;
-  height: 132px;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -66,62 +72,79 @@ nav.main-nav p {
   text-align: center;
 }
 
-div.first-image-block {
+section.first-image-block {
   margin-top: 30px;
   text-align: center;
 }
 
-div.first-image-block img {
+section.first-image-block img {
   width: 646px;
   height: 644px;
   border: 8px solid #856517;
 }
 
-div.first-image-block img:first-of-type {
+section.first-image-block > img:first-of-type {
   float: left;
 }
 
-div.first-image-block img:last-of-type {
+section.first-image-block > img:last-of-type {
   float: right;
 }
 
-div.main-filling {
-  background-color: white;
-  font-family: Roboto;
-  font-size: 48px;
-  font-style: italic;
-  text-align: center;
-  font-weight: 400;
-  line-height: normal;
+article {
   display: inline-block;
-  height: 1068px;
+  text-align: center;
+  height: 910px;
   width: 100%;
   margin-top: 30px;
 }
 
-div.side {
+aside {
   width: 21.58%;
   display: inline-block;
   float: left;
-  margin-top: 30px;
 }
 
-div.side p {
+aside > nav, aside > section {
+  height: 1203px;
+}
+
+aside p {
   margin: 0px;
 }
 
 nav.side-nav {
-  background-color: white;
-  font-family: Roboto;
-  font-size: 48px;
-  font-style: italic;
-  text-align: center;
-  font-weight: 400;
-  line-height: normal;
-  height: 1287px;
+  border: 8px solid #856517;
 }
 
-div.order-form {
+nav.side-nav > ul {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+nav.side-nav ul li:last-child {
+  padding-bot: 0px;
+}
+
+li a {
+  color: #784E0D;
+  font-family: "Ruslan Display";
+  font-size: 30px;
+  -webkit-text-stroke: 0.7px black;
+  text-decoration: none;
+  transition: transform 1s ease-out 0.5s;
+}
+
+li a:hover {
+  transform: translate(5px, 5px);
+  color: #B8860B;
+}
+
+li:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+section.order-form {
   background-color: white;
   font-family: Roboto;
   font-size: 48px;
@@ -129,26 +152,25 @@ div.order-form {
   text-align: center;
   font-weight: 400;
   line-height: normal;
-  height: 1098px;
   margin-top: 52px;
 }
 
-div.second-image-block {
+section.second-image-block {
   margin-top: 20px;
   text-align: center;
 }
 
-div.second-image-block img {
+section.second-image-block img {
   width: 646px;
   height: 644px;
   border: 8px solid #856517;
 }
 
-div.second-image-block img:first-of-type {
+section.second-image-block img:first-of-type {
   float: left;
 }
 
-div.second-image-block img:last-of-type {
+section.second-image-block img:last-of-type {
   float: right;
 }
 
