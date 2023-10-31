@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  font-size: 20px;
   font-family: "Ruslan Display";
   width: 95%;
   margin-bottom: 4%;
@@ -42,14 +43,14 @@ div.top-text {
 }
 
 header h1 {
-  font-size: 3vw;
+  font-size: 3em;
   padding-left: 5%;
   color: #784E0D;
   text-shadow: 0.1em 0.1em 0.08em rgba(87, 61, 19, 0.5);
 }
 
 header h2 {
-  font-size: 2vw;
+  font-size: 2em;
   text-align: center;
   color: #B8860B;
   text-shadow: 0.1em 0.1em 0.08em rgba(133, 101, 23, 0.5);
@@ -60,7 +61,7 @@ main {
   margin-left: auto;
   width: 73%;
   float: right;
-  font-size: 1.2vw;
+  font-size: 1.2em;
 }
 
 nav.main-nav {
@@ -79,25 +80,17 @@ nav.main-nav p {
   text-align: center;
 }
 
-section.first-image-block {
+.first-image-block {
   justify-content: space-around;
   display: flex;
   margin-top: 1%;
   text-align: center;
 }
 
-section.first-image-block img {
+.first-image-block img {
   width: 32%;
   height: auto;
   border: 0.4vw solid #856517;
-}
-
-section.first-image-block > img:first-of-type {
-  float: left;
-}
-
-section.first-image-block > img:last-of-type {
-  float: right;
 }
 
 article {
@@ -124,6 +117,7 @@ aside p {
 }
 
 nav.side-nav {
+  display: block;
   -webkit-text-stroke: 0.05vw black;
   border: 0.4vw solid #856517;
 }
@@ -144,7 +138,7 @@ ul li:not(:first-of-type) {
 
 li a {
   color: #784E0D;
-  font-size: 2vw;
+  font-size: 1.5em;
   text-decoration: none;
   transition: transform 1s ease-out 0.5s;
 }
@@ -158,11 +152,6 @@ nav.side-nav ul li::not(:first-of-type) {
   margin-top: 1%;
 }
 
-section.order-form {
-  color: #d09e23;
-  font-size: 2%;
-}
-
 section.order-form input {
   height: auto;
   width: 95%;
@@ -172,25 +161,17 @@ section.order-form input, label {
   display: block;
 }
 
-section.second-image-block {
+.second-image-block {
   justify-content: space-around;
   display: flex;
   margin-top: 1%;
   text-align: center;
 }
 
-section.second-image-block img {
+.second-image-block img {
   width: 32%;
   height: auto;
   border: 0.4vw solid #856517;
-}
-
-section.second-image-block img:first-of-type {
-  float: left;
-}
-
-section.second-image-block img:last-of-type {
-  float: right;
 }
 
 footer {
@@ -215,14 +196,14 @@ section.order-form {
 }
 
 .order-form label, .order-form li {
-  font-size: 2vw;
+  color: #ffa632;
+  font-size: 1.6rem;
 }
 
 .table-container {
+  margin-left: 30%;
   display: grid;
-  overflow-x: auto;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 80%));
   margin-top: 20px;
 }
 
@@ -252,11 +233,23 @@ section.order-form {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
   .side-nav, div.logo, .order-form {
     display: none;
   }
   footer {
     width: 70%;
     float: right;
+  }
+  .first-image-block, .second-image-block {
+    display: block;
+  }
+  .first-image-block img, .second-image-block img {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=outlines.css.map */

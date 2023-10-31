@@ -18,7 +18,9 @@ $side-nav-font-color: $h1-font-color
 html
     background: $background-gradient
     background-repeat: no-repeat
+    
 body
+    font-size: 20px
     font-family: 'Ruslan Display' 
     width: 95%
     margin-bottom: 4%
@@ -49,13 +51,13 @@ div.top-text
 
 
 header h1
-    font-size: 3vw
+    font-size: 3em
     padding-left: 5%
     color: $h1-font-color
     text-shadow: 0.1em 0.1em 0.08em rgba(87, 61, 19, 0.5)
 
 header h2
-    font-size: 2vw
+    font-size: 2em
     text-align: center
     color: #B8860B
     text-shadow: 0.1em 0.1em 0.08em rgba(133, 101, 23, 0.50)
@@ -65,7 +67,7 @@ main
     margin-left: auto
     width: 73%
     float: right
-    font-size: 1.2vw
+    font-size: 1.2em
     
 nav.main-nav 
     width: 100%
@@ -82,22 +84,16 @@ nav.main-nav
 nav.main-nav p
     text-align: center
 
-section.first-image-block
+.first-image-block
     justify-content: space-around
     display: flex
     margin-top: 1%
     text-align: center
 
-section.first-image-block img 
+.first-image-block img 
     width: 32%
     height: auto
     @include image-border
-
-section.first-image-block > img:first-of-type
-    float: left
-
-section.first-image-block > img:last-of-type
-    float: right
 
 article
     display: inline-block
@@ -119,6 +115,7 @@ aside p
     margin: 0
 
 nav.side-nav
+    display: block
     -webkit-text-stroke: 0.05vw black
     @include image-border()
 
@@ -137,7 +134,7 @@ ul li:not(:first-of-type)
 li a
     color: $side-nav-font-color
     
-    font-size: 2vw
+    font-size: 1.5em
     text-decoration: none
     transition: transform 1s ease-out 0.5s
 
@@ -148,11 +145,6 @@ li a:hover
 nav.side-nav ul li::not(:first-of-type)
     margin-top: 1%
 
-
-section.order-form
-    color: #d09e23
-    font-size: 2% 
-
 section.order-form input
     height: auto
     width: 95%
@@ -160,22 +152,16 @@ section.order-form input
 section.order-form input,label
     display: block
 
-section.second-image-block
+.second-image-block
     justify-content: space-around
     display: flex
     margin-top: 1%
     text-align: center
 
-section.second-image-block img
+.second-image-block img
     width: 32%
     height: auto
     @include image-border
-
-section.second-image-block img:first-of-type
-    float: left
-
-section.second-image-block img:last-of-type
-    float: right
 
 footer
     display: flex
@@ -196,14 +182,14 @@ section.order-form
     margin-top: 10%
 
 .order-form label, .order-form li
-    font-size: 2vw
+    color: #ffa632
+    font-size: 1.6rem
 
 .table-container
-  display: grid
-  overflow-x: auto // Добавьте горизонтальную прокрутку при необходимости
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) /* Это создаст динамический grid с автоматически изменяемыми колонками */
-  gap: 20px /* Регулируйте это значение по вашему усмотрению */
-  margin-top: 20px
+    margin-left: 30%
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(20%, 80%))
+    margin-top: 20px
 
 .responsive-table
   width: 100%
@@ -226,11 +212,23 @@ section.order-form
   padding: 8px
 
 @media screen and (max-width: 768px)
+    body
+        font-size: 12px
     .side-nav, div.logo, .order-form
         display: none
     footer
         width: 70%
         float: right
+    
+    .first-image-block, .second-image-block 
+        display: block
+
+    .first-image-block img, .second-image-block img
+        float: none
+        width: 100%
+        height: auto
+        margin: 0 auto
+    
 
 // Стили для ячеек таблицы
 .responsive-table td
