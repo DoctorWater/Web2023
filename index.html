@@ -7,6 +7,8 @@
     <meta name="description" content="Закажите любое оружие! Восславим силу, что позволила нам снова ковать оружие!">
     <title>Кузня</title>
     <link href="css/outlines.css" rel="stylesheet">
+    <script src="resources/scripts/active-href.js"></script>
+    <script src="resources/scripts/load.js"></script>
 </head>
 <body>
     <script>
@@ -21,6 +23,9 @@
         })();
     </script>
 
+    <div id="preloader">
+        <img src="resources/img/gifs/load.gif" alt="preloader">
+    </div>
 
     <header>
         <div class = "logo">
@@ -36,11 +41,12 @@
         <aside>
             <nav class="side-nav">
                 <ul>
-                    <li><a href="#">Отделка рукояти топора</a></li>
-                    <li><a href="#">X съезд Каменного Совета</a></li>
-                    <li><a href="#">Тьма с Востока: ящеры победили?</a></li>
-                    <li><a href="#">Топоры вместо рук: история Олгрима Безумного</a></li>
-                    <li><a href="#"><blockquote cite="#">Слово "ром" и слово "смерть" значат для вас одно и то же!</blockquote> Сэр Ливси</a></li>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="resources/html/ToDo.html">Создайте список ваших врагов</a></li>
+                    <li><a href="">X съезд Каменного Совета</a></li>
+                    <li><a href="">Тьма с Востока: ящеры победили?</a></li>
+                    <li><a href="resources/html/olgrim.html">Топоры вместо рук: история Олгрима Безумного</a></li>
+                    <li><a href=""><blockquote cite="#">Слово "ром" и слово "смерть" значат для вас одно и то же!</blockquote> Сэр Ливси</a></li>
                 </ul>
             </nav>
             <section class="order-form">
@@ -115,12 +121,27 @@
             </div>
         </main>
         
+        
     </div>
-        <footer>
-            <p>С нашими мастерами и мастерицами можно связаться через блюдечко с голубой каемочкой. Номер изделия:
-            "Тьма тьмущая сорок сороков"</p>
-            <p id="loading-stats"> </p>
-        </footer>
+    <section>
+        <div id="posts">
+            
+        </div>
+        <div id="pagination"></div>
+    </section>
+
+    <footer>
+        <p>С нашими мастерами и мастерицами можно связаться через блюдечко с голубой каемочкой. Номер изделия:
+        "Тьма тьмущая сорок сороков"</p>
+        <p id="loading-stats"> </p>
+    </footer>
+
+
+    <template id="template">
+        <h2></h2>
+        <p></p>
+        <strong></strong>
+    </template>
     
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/todo.css" rel="stylesheet">
+    <title>TO-DO List</title>
+</head>
+<body>
+    <nav>
+        <a href="../../index.html">Главная</a>
+    </nav>
+    <main>
+        <h1>TO-DO List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </main>
+
+    <script src="../scripts/todo_script.js"></script>
+    <template id="template">
+        <li>
+            <p></p>
+            <button type="button">Remove</button>
+        </li>
+    </template>
+</body>
+</html>

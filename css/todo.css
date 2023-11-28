@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Ruslan+Display&display=swap");
+html {
+  background: linear-gradient(180deg, rgba(200, 115, 37, 0.76) 0%, rgba(115, 75, 40, 0.76) 37.5%, rgba(104, 59, 21, 0.76) 39.58%, rgba(54, 30, 12, 0.76) 60.42%);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Ruslan Display";
+  width: 95%;
+  margin-bottom: 4%;
+  margin-top: 1%;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #784E0D;
+  -webkit-text-stroke: 0.01vw black;
+  font-size: 4em;
+}
+
+li p {
+  font-size: 2em;
+}
+
+nav a {
+  color: #784E0D;
+  -webkit-text-stroke: 0.04vw black;
+  text-decoration: none;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-style: solid;
+  border-radius: 10px;
+  background: #dd8a0d;
+  color: #fff;
+  padding: 0.5vw 0.7vw;
+}
+
+#taskInput {
+  padding: 0.5vw 1vw;
+  background-color: #ffc164;
+  border-radius: 5px;
+}/*# sourceMappingURL=todo.css.map */
