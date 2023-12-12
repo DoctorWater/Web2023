@@ -2,7 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTasks();
 });
 
+document.getElementById('taskForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    addTask();
+});
+
 function addTask() {
+    const taskForm = document.getElementById('taskForm'); // Updated to use the form
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
     let clone = document.querySelector('#template').content.cloneNode(true);
@@ -25,6 +31,9 @@ function addTask() {
 
         taskInput.value = '';
     }
+    else{
+        alert("Your task is empty!")
+    }
 }
 
 function removeTask(task) {
@@ -42,6 +51,7 @@ function saveTasks() {
 
     for (let i = 0; i < liElements.length; i++) {
         var text = liElements[i].getElementsByTagName('p')[0];
+        text.innerHTML = text.innerHTML.trim()
         tasks.push(text.innerHTML);
     }
     var debug = JSON.stringify(tasks);
@@ -73,10 +83,6 @@ function loadTasks() {
             console.log("New task text:" + newTaskText.textContent)
     
             taskList.appendChild(newTask);
-    
-    
-            taskInput.value = '';
-            
-        })
+        });
     }
 }
